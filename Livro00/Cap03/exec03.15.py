@@ -5,4 +5,4 @@ cigarDays = int(input("Quantos cigarros dia? "))
 
 timeReduction = ((10*cigarDays)/(24*60))*(timeSmoke*365)
 
-print(f"Estimativa de redução de tempo de vida é {timeReduction:.2f} dias")
+print(f"Estimativa de redução de tempo de vida é {timeReduction:.0f} dias")
