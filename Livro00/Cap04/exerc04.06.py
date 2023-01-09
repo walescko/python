@@ -9,3 +9,4 @@ if distance > 200:
     price = 0.45
 
 print(f"O valor a ser pago para percorrer a distâncias de {distance} é R$ {distance*price:6.2f}")
+print("fim")
