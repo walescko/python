@@ -29,6 +29,6 @@ elif choice == "4":
         print("Divisão por zero!")
 
 if number02 != 0:
-print(f"{number01} {op} {number02} = {result}")
+    print(f"{number01} {op} {number02} = {result}")
 
 
