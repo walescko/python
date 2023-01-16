@@ -13,6 +13,7 @@ typeImmobile = input("Qual o tipo de imóvel? ")
 amountToPay = 0
 immobile = ""
 
+#local onde temos os valores do kWh, melhor deixar esses valores fora do bloco de seleção para ficar mais fácil alteração dos valores durante a manutenção do código.
 price = 0.40
 residencial02 = 0.65
 noResidencialPrice01 = 0.55
@@ -34,6 +35,7 @@ elif typeImmobile == "I" or typeImmobile == "i":
         price = noResidencialPrice01
     else:
         price = noResidencialPrice02
+
 
 amountToPay = consumption * price;
 
