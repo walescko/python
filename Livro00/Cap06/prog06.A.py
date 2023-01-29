@@ -10,12 +10,12 @@ i = 0
 while i < length:
     print(f"Elemento {i} é {Z[i]}")
     i += 1
-i = 0
 
 print(Z[1])
 Z[1] = 3
 print(Z[1])
 
+i = 0
 while i < length:
     print(f"Elemento {i} é {Z[i]}")
     i += 1
