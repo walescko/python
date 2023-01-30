@@ -1,5 +1,26 @@
-List01 = [1, 2, 3]
-List02 = [2, 3, 4]
+#Faça um programa que percorra duas listas e gere uma terceira sem elementos repetidos.
+print("WALESCKO LIMA LINDA")
+print("Lista 01:")
+List01 = []
+print("Digite os valores da Lista 1 (0 para sair): ")
+i = 0
+while True:
+    number = int(input(f" Entre com o {i+1} elemento: "))
+    if number == 0:
+        break
+    List01.append(number)
+    i += 1
+
+print("Lista 02:")
+List02 = []
+print("Digite os valores da Lista 2 (0 para sair): ")
+i = 0
+while True:
+    number = int(input(f" Entre com o {i+1} elemento: "))
+    if number == 0:
+        break
+    List02.append(number)
+    i += 1
 
 List03 = []
 List04 = List01[:]
