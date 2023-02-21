@@ -3,7 +3,7 @@ import sqlite3
 connection = sqlite3.connect("diaryTelephone.db")
 cursor = connection.cursor()
 cursor.execute('''
-    create table diaryTelehpne(
+    create table diaryTelephone(
     name text,
     telephone text)
     ''')
