@@ -6,7 +6,7 @@ data = [("Oscar Eca", "98901-0109"),
 connection = sqlite3.connect("diaryTelephone.db")
 cursor = connection.cursor()
 cursor.executemany('''
-    insert into diaryTelephone(name,telephone)
+    insert into DIARYTELEPHONE(name,telephone)
     values(?, ?)
     ''', data)
 connection.commit()
