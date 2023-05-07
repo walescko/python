@@ -3,7 +3,7 @@ last = 10
 line = list(range(1, last+1))
 while True:
     print(f"\nExistem {len(line)} clientes na fila")
-    print(f"Fina atual: {line}")
+    print(f"Fila atual: {line}")
     print("Digite F para adicionar um cliente ao fim da fila,")
     print("ou A para realizar o atendimento. S para sair.")
     operator = input("Operação (F, A ou S:) ")
