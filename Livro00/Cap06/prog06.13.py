@@ -1,4 +1,4 @@
-#Programa 6.13 - Copy elements for other list
+# Programa 6.13 - Copy elements for other list
 V = [9, 8, 7, 12, 0, 13, 21]
 P = []
 O = []
