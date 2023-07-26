@@ -1,6 +1,6 @@
 # Programa 6.20 - Buble Sort
 
-L = [7, 4, 3, 12, 8]
+L = [5, 4, 3, 2, 1]
 end = len(L)
 
 print(f"Quantidade de elementos a ser ordenado {end}")
