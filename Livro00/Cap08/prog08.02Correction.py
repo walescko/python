@@ -1,8 +1,14 @@
-import unittest
+# Programa 8.2 Correction
 
-class MyTestCase(unittest.TestCase):
-    def test_something(self):
-        self.assertEqual(True, False)  # add assertion here
+def sum(L):
+    total = 0
+    x = 0
+    while x < len(L):
+        total += L[x]
+        x += 1
+    return total
 
-if __name__ == '__main__':
-    unittest.main()
+L = [1, 7, 2, 5, 15]
+print(sum(L))
+S = [1, 7, 2, 6, 15, 7 ,8]
+print(sum(S))
