@@ -10,5 +10,5 @@ def factorial(n):
 # print(factorial(3))
 # print(factorial(0))
 # print(factorial(1))
-n = int(input("Entre um número para calcular o fatorial: "))
+n = float(input("Entre um número para calcular o fatorial: "))
 print(f"O fatotial de {n} é {factorial(n)}")
