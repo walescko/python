@@ -5,3 +5,5 @@ def retangle(width, length, character="*"):
         print(line)
 
 retangle(8,6)
+print("Vamos a outro retângulo:")
+retangle(50,6)
