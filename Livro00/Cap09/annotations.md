@@ -11,5 +11,7 @@ b -> modo binário\
 
 Método **WRITE** -> usado para escrever ou gravar os dados no arquivo.\
 Método **READ** para leitura de dados do arquivo.\
-Métofo **CLOSE** -> para fechar o arquivo.\
+Método **CLOSE** -> para fechar o arquivo.\
+\
+Uma forma de evitar de esquecer de fechar o programa com o **close** é usar o **with** no programa.
 
