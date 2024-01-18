@@ -1,5 +1,6 @@
 ;esta linha não deve ser impressa
 >Esta linha deve ser impressa
 *Esta linha deve ser centralizada
+*Walescko o melhor!
 uma linha normal
 e outra linha normal

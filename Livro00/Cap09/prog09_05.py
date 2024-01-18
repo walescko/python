@@ -1,7 +1,7 @@
 #Programa 9.5 - Processamento de um arquivo
 LARGURA = 79
 with open("enterdata.txt") as enter:
-    for line in enter.readline():
+    for line in enter.readlines():
         if line[0] == ";":
             continue
         elif line[0] == ">":
