@@ -1,5 +1,5 @@
 #Programa 9.6 - Controle de uma agenda de telefone
-agenta = []
+agenda = []
 def pede_nome():
     return input("Nome: ")
 def pede_telefone():
