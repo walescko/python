@@ -15,6 +15,7 @@ account02.deposit(95.15)
 account02.withdrawal(1500)
 account01.statement()
 account02.statement()
+print("Diversão pura...")
 
 
 
