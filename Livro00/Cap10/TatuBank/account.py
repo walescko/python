@@ -9,7 +9,7 @@ class Account:
         print(f"CC Número: {self.number} Saldo: {self.balance:10.2f}")
     def withdrawal(self, value):
         if self.balance >= value:
-            self.saldo -= value
+            self.balance -= value
             self.operators.append(["SAQUE", value])
     def deposit(self, value):
         self.balance += value
@@ -19,3 +19,12 @@ class Account:
         for o in self.operators:
             print(f"{o[0]:10s} {o[1]:10.2f}")
         print(f"\n   Saldo: {self.balance:10.2f}\n")
+
+class SpecialAccount(Account):
+    def __init__(self, customers, number, balance = 0, limits = 0):
+        Account.__init__(self, customers, number, balance)
+        self.limits = limits
+    def withdrawal(self, value):
+        if self.balance + self.limits >= value:
+            self.balance -= value
+            self.operators.append(["SAQUE", value])
