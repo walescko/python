@@ -11,3 +11,9 @@ Livro: Problemas Clássicos de Ciência da Computação com Python\
 autor: David Kopec\
 Primeira Edição, ano 2019
 Editora Novatec\
+\
+Livro: Python para Data Science\
+autor: Amilcar Netto e Francisco Maciel\
+xxxx edição, ano YYYY
+Editora Não sei o nome e tenho que atulizar depoisx
+
