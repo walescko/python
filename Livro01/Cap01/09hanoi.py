@@ -34,4 +34,3 @@ if __name__ == '__main__':
     print(tower_a)
     print(tower_b)
     print(tower_c)
-    
