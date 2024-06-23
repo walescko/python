@@ -42,5 +42,18 @@ print(linear_contains(my_gene, acg))
 print(linear_contains(my_gene, gat))
 
 
+def binary_contains(gene: Gene, key_codon: Codon) -> bool:
+    low: int = 0
+    high: int = len(gene)
+    while low <= high:
+        mid: int = (low + high) // 2
+        if gene[mid] < key_codon:
+            low = mind + 1
+        elif gene[mid] > key_codon:
+            high = mid -1
+        else:
+            return True
+    return False
+
 
         
