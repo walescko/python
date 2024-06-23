@@ -55,5 +55,24 @@ def binary_contains(gene: Gene, key_codon: Codon) -> bool:
             return True
     return False
 
+my_sorted_gene: Gene = sorted(my_gene)
+print(binary_contains(my_sorted_gene, acg))
+print(binary_contains(my_sorted_gene, gat))
 
-        
+from __future__ import annotations
+from typing import TypeVar, Iterable, Sequence, Generic, List, Callble, Set, Deque, Dict, Any, Optional
+from typing_extensions import Protocol
+from heapq import heappush, heappop
+T = TypeVar('T')
+
+def linear_contains(iterable: Iterable[T], key: T) -> bool:
+    for item in iterable:
+        if item == key:
+            return True
+    return False
+
+C = TypeVar("C", bound="Comparable")
+
+class Comparable(Protocol):
+    def
+
