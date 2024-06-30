@@ -33,3 +33,15 @@ class Maze:
                     self._grid[row][column] = Cell.BLOCKED
 
 
+def __str__(self) -> str:
+    output: str = ""
+    for row in self._grid:
+        output += "".join([c.value for c in row]) + "\n"
+    return output
+
+maze: Maze = Maze()
+print(maze)
+
+def goal_test(self, ml: MazeLocation) -> bool:
+    return ml == self.goal
+
