@@ -2,7 +2,7 @@ from enum import Enum
 from typing import List, NamedTuple, Callable, Optional
 import random
 from math import sqrt
-from generic_search import dfs, bfs, node_to_path, astar, Node
+# from generic_search import dfs, bfs, node_to_path, astar, Node
 
 class Cell(str, Enum):
     EMPTY = " "
@@ -45,3 +45,14 @@ print(maze)
 def goal_test(self, ml: MazeLocation) -> bool:
     return ml == self.goal
 
+def successors(self, ml: MazeLocation) -> List[MazeLocation]:
+    locations: List[MazeLocation] = []
+    if ml.row + 1 < self._rows and self._grid[ml.row + 1][ml.column] != Cell.BLOCKED:
+        locations.append(MazeLocation(ml.row + 1, ml.column))
+    if ml.row - 1 >= 0 and self._grid[ml.row - 1][ml, ml.column] != Cell.BLOCKED:
+        locations.append(MazeLocation(ml.row - 1, ml.column))
+    if ml.column + 1 < self._columns and self._grid[ml.row][ml.column + 1] != Cell.BLOCKED:
+        locations.append(MazeLocation(ml.row, ml.column + 1))
+    if ml.column - 1 >= 0 and self._grid[ml.row][ml.column - 1] != Cell.BLOCKED:
+        locations.append(MazeLocation(ml.row, ml.column - 1))
+    return locations
