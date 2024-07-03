@@ -43,3 +43,11 @@ if __name__ == "__main__":
     print(linear_contain([1, 5, 15, 15, 15, 20], 5))
     print(binary_contains(["a", "d", "e", "f", "z"], "f"))
     print(binary_contains(["jonh", "mark", "ronald", "sarah"], "sheila"))
+
+class Syack)Generic[T]:
+    def __init__(self) -> None:
+    self._container: List[T] = []
+
+    @property
+    def empty(self) -> bool:
+        return not self._container
