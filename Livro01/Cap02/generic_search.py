@@ -1,5 +1,5 @@
 from __future__ import annotations
-from typing import TypeVar, Iterable, Sequence, Generic, List, Callble, Set, Deque, Dict, Any, Optional
+from typing import TypeVar, Iterable, Sequence, Generic, List, Callable, Set, Deque, Dict, Any, Optional
 from typing_extensions import Protocol
 from heapq import heappush, heappop
 T = TypeVar('T')
@@ -70,3 +70,28 @@ class Node(Generic[T]):
 
     def __lt__(self, other: Node) -> bool:
         return (self.cost + self.heuristic) < other.cost + self.heuristic)
+
+def dfs(initial: T, goal_test: Callable[[T], bool], successors: Callable[[T], List[T]]) -> Optional[Node[T]]:
+            frontier = Stack[Node[T]] = Stack()
+            frontier.push(Node(initial, None))
+            explored: Set[T] = {initial}
+
+            while not frontier.empty():
+                current_node: Node[T] = frontier.pop()
+                current_state: T = current_node.state
+                if goal_test(current_state):
+                    return current_node
+                for child in successors(current_state):
+                    if child in explored:
+                        continue
+                    explored.add(child)
+                    frontier.push(Node(child, current_node))
+            return None
+def none_to_path(node: Node[T]) -> List[T]:
+    path: List[T] = [node.state]
+    while node.parent is not None:
+        node = node.parent
+        path.append(node.state)
+    path.reverse()
+    return path
+
