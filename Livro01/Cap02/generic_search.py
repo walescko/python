@@ -13,9 +13,9 @@ def linear_contains(iterable: Iterable[T], key: T) -> bool:
 C = TypeVar("C", bound="Comparable")
 
 class Comparable(Protocol):
-    def __eq_(self, other: Any): -> bool:
-
-    def __lt__(self, other: C) -> bool:
+    # def __eq_(self, other: Any): -> bool:
+    #
+    # def __lt__(self, other: C) -> bool:
 
     def __gt__(self: C, other:C) -> bool:
         return (not self < other) and self != other
@@ -44,9 +44,9 @@ if __name__ == "__main__":
     print(binary_contains(["a", "d", "e", "f", "z"], "f"))
     print(binary_contains(["jonh", "mark", "ronald", "sarah"], "sheila"))
 
-class Syack)Generic[T]:
+class Syack(Generic[T]):
     def __init__(self) -> None:
-    self._container: List[T] = []
+        self._container: List[T] = []
 
     @property
     def empty(self) -> bool:
@@ -69,9 +69,9 @@ class Node(Generic[T]):
         self.heuristic: float = heuristic
 
     def __lt__(self, other: Node) -> bool:
-        return (self.cost + self.heuristic) < other.cost + self.heuristic)
+        return (self.cost + self.heuristic) < (other.cost + self.heuristic)
 
-def dfs(initial: T, goal_test: Callable[[T], bool], successors: Callable[[T], List[T]]) -> Optional[Node[T]]:
+    def dfs(initial: T, goal_test: Callable[[T], bool], successors: Callable[[T], List[T]]) -> Optional[Node[T]]:
             frontier = Stack[Node[T]] = Stack()
             frontier.push(Node(initial, None))
             explored: Set[T] = {initial}
@@ -87,6 +87,7 @@ def dfs(initial: T, goal_test: Callable[[T], bool], successors: Callable[[T], Li
                     explored.add(child)
                     frontier.push(Node(child, current_node))
             return None
+
 def none_to_path(node: Node[T]) -> List[T]:
     path: List[T] = [node.state]
     while node.parent is not None:
