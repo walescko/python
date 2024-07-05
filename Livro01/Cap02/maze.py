@@ -69,4 +69,14 @@ def clear(self, path: List[MazeLocation]):
     self._grid[self.start.row][self.start.column] = Cell.START
     self._grid[self.goal.row][self.goal.column] = Cell.GOAL
 
-
+if __name__ == "__main__":
+    m: Maze = Maze()
+    print(m)
+    solution1: Optional[Node[MazeLocation]] = dfs(m.start, m.goal_test, m.successors)
+    if solution1 is None:
+        print("No solution found using depth-firts search")
+    else:
+        path1: List[MazeLocation] = node_to_path(solution1)
+        m.mark(path1)
+        print(m)
+        m.clear(path1)
